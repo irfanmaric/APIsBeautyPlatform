@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/marinefx/APIsBeautyPlatform/public_html/ #Add /<sub_folder> if required
-    - /bin/cp -r * $DEPLOYPATH
+    - /bin/cp * $DEPLOYPATH
