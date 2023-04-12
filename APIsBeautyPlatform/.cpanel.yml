@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/marinefx/repositories/APIsBeautyPlatform/APIsBeautyPlatform
+    - /bin cp * $DEPLOYPATH #copy all from root
