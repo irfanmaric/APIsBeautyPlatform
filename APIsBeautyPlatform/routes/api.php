@@ -27,6 +27,8 @@ Route::post('login',[\App\Http\Controllers\Api\AuthController::class,'login']);
 Route::post('auth/logout',[\App\Http\Controllers\Api\AuthController::class,'logoutUser']);
 Route::post('forgot/password',[\App\Http\Controllers\ForgotPasswordController::class,'forgotPassword'])->name('password.forgot');
 Route::post('reset/password',[\App\Http\Controllers\ForgotPasswordController::class,'resetPassword'])->name('password.reset');
+Route::get("public/companies",[\App\Http\Controllers\BookingController::class,'publicCompanies']);
+Route::get("public/service",[\App\Http\Controllers\BookingController::class,'getAllServices']);
 
 
 Route::group(['middleware' => 'auth:api' ], function() {
@@ -45,5 +47,10 @@ Route::group(['middleware' => 'auth:api' ], function() {
     Route::put('updateTherapist',[\App\Http\Controllers\BookingController::class,'updateTherapist']);
     Route::post('stripe',[\App\Http\Controllers\StripePaymentController::class,'stripePost']);
     Route::post('auth/logout',[\App\Http\Controllers\Api\AuthController::class,'logoutUser']);
+    Route::get("employeesByCompany/{idCompany}",[\App\Http\Controllers\BookingController::class,'employeesByCompany']);
+
+    Route::post('private/submitAppointment',[\App\Http\Controllers\BookingController::class,'submitAppointment']);
+
+
 });
 

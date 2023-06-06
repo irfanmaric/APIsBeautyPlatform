@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PhpIncludePathManager">
+  <component name="ChangeListManager">
+    <list default="true" id="157abf17-4f5c-480d-9194-d09a25c04c6c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/APIsBeautyPlatform/app/Command/RegisterUserCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APIsBeautyPlatform/app/Query/GetCompanyEmployeesQuery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APIsBeautyPlatform/app/Service/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/APIsBeautyPlatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/APIsBeautyPlatform.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIsBeautyPlatform/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIsBeautyPlatform/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/APIsBeautyPlatform/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIsBeautyPlatform/.rnd" beforeDir="false" afterPath="$PROJECT_DIR$/APIsBeautyPlatform/.rnd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIsBeautyPlatform/app/Http/Controllers/BookingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/APIsBeautyPlatform/app/Http/Controllers/BookingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIsBeautyPlatform/app/Http/Requests/createBookingRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/APIsBeautyPlatform/app/Http/Requests/createBookingRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIsBeautyPlatform/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APIsBeautyPlatform/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/APIsBeautyPlatform/routes/api.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/APIsBeautyPlatform/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/APIsBeautyPlatform/vendor/composer" />
       <path value="$PROJECT_DIR$/APIsBeautyPlatform/vendor/sebastian/lines-of-code" />
@@ -132,10 +165,78 @@
       <path value="$PROJECT_DIR$/APIsBeautyPlatform/vendor/brick/math" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
-  <component name="PhpUnit">
-    <phpunit_settings>
-      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/APIsBeautyPlatform/vendor/autoload.php" />
-    </phpunit_settings>
+  <component name="ProjectId" id="2PFemiwN75Xl8Nn0y0OtCoslW1P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Irfan Maric/Desktop/APIsBeautyPlatform&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="157abf17-4f5c-480d-9194-d09a25c04c6c" name="Changes" comment="" />
+      <created>1683057417280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683057417280</updated>
+      <workItem from="1683057418677" duration="9323000" />
+      <workItem from="1683738373122" duration="8279000" />
+      <workItem from="1684323585930" duration="4430000" />
+      <workItem from="1685005943487" duration="14070000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="7f2c9285-6049-40ae-9631-daaa448c521b">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="7f2c9285-6049-40ae-9631-daaa448c521b" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
 </project>

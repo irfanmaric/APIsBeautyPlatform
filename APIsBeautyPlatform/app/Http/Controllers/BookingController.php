@@ -2,14 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Command\RegisterUserCommand;
 use App\Http\Requests\createBookingRequest;
 use App\Http\Requests\updateTherapistRequest;
 use App\Http\Requests\updateTreatmentRequest;
+use App\Models\Appointment;
+use App\Models\Company;
+use App\Models\Employees;
 use App\Models\Reservation;
+use App\Models\Service;
 use App\Models\Therapist;
 use App\Models\Treatment;
 use App\Models\TreatmentTherapist;
 use App\Models\User;
+use App\Query\GetCompanyEmployeesQuery;
+use App\Service\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -53,14 +60,18 @@ class BookingController extends Controller
     }
 
     //submitReservation/Booking
-    public function submitReservation(createBookingRequest $request): \Illuminate\Http\JsonResponse
+    public function submitReservation(
+        createBookingRequest $request,
+        UserService $userService
+    ): \Illuminate\Http\JsonResponse
     {
-        $user=Auth::user();
-        $reservation = Reservation::create([
-            'DateTime' => $request->DateTime,
-            'UserID' => optional(Auth::user())->id,
-            'treatmenttherapistID' => $request->treatmenttherapistID
-        ]);
+        $user = Auth::user();
+        $command = new RegisterUserCommand(
+            $user->UserID,
+            $request->DateTime,
+            $request->treatmenttherapistID
+        );
+        $userService->registerUser($command);
 
         return response()->json([
             'status' => true,
@@ -186,5 +197,81 @@ class BookingController extends Controller
                 'message' => 'No update'
             ], 400);
         }
+    }
+    function publicCompanies(): \Illuminate\Http\JsonResponse
+    {
+        $companies = Company::all();
+        if ($companies->isEmpty()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'There are no companies'
+            ], 400);
+        } else {
+            return response()->json([
+                'success' => true,
+                'data' => [
+                    'companies' => $companies
+                ]
+            ], 200);
+        }
+
+    }
+
+    function employeesByCompany(
+        $idCompany,
+        UserService $service
+    ): \Illuminate\Http\JsonResponse
+    {
+        $query = new GetCompanyEmployeesQuery($idCompany);
+        $employees = $service->getCompanyEmployees($query);
+
+
+        if ($employees->isEmpty()    === true) {
+            return response()->json([
+                'success' => false,
+                'message' => 'There are no employees in this company'
+            ], 400);
+        } else {
+            return response()->json([
+                    'success' => true,
+                    'data' => $employees ]
+                , 200);
+        }
+    }
+    //getAllService
+    function getAllServices(): \Illuminate\Http\JsonResponse
+    {
+        $service = Service::all();
+        if ($service->isEmpty()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'There are no services.'
+            ], 400);
+        } else {
+            return response()->json([
+                'success' => true,
+                'data' => [
+                    'service' => $service
+                ]
+            ], 200);
+        }
+
+    }
+    //submitAppointment
+    public function submitAppointment(createBookingRequest $request): \Illuminate\Http\JsonResponse
+    {
+        $user=Auth::user();
+        $appointment = Appointment::create([
+            'PhoneNumber' => $request->PhoneNumber,
+            'companyID' => $request->companyID,
+            'serviceID' => $request->serviceID,
+            'Email'=>$request->Email
+        ]);
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Reservation created successfully',
+        ], 200);
+
     }
 }

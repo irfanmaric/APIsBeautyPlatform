@@ -24,9 +24,10 @@ class createBookingRequest extends FormRequest
     public function rules()
     {
         return [
-            'DateTime'=>'required|date_format:Y-m-d',
-
-            'treatmenttherapistID'=>'required'
+            'PhoneNumber'=>'required',
+            'companyID' => 'required',
+            'serviceID' => 'required',
+            'Email'=>'required'
         ];
     }
 
@@ -34,9 +35,10 @@ class createBookingRequest extends FormRequest
     {
         return [
 
-            'DateTime.required' => 'Ovo polje je obavezno !',
-
-            'treatmenttherapistID.required' =>'Ovo polje je obavezno'
+            'PhoneNumber.required' => 'Ovo polje je obavezno !',
+            'companyID.required' => 'Ovo polje je obavezno !',
+            'serviceID.required' => 'Ovo polje je obavezno !',
+            'Email.required' =>'Ovo polje je obavezno'
         ];
 
     }
